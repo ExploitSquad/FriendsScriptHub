@@ -13,12 +13,14 @@ local Tab = Window:NewTab("DH")
 local dhmdh = Tab:NewSection("DH")
 local Tab = Window:NewTab("Settings")
 local Settings = Tab:NewSection("Settings")
-LocalPlayer:NewButton("chariosware", "", function()
-    ----------------------------------------------------
----  A redistribution of https://wearedevs.net/  ---
-----------------------------------------------------
 
---Waits until the player is in game
+Section:NewSlider("WalkSpeed", "", 250, 50, function(v) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+Section:NewSlider("JumpPower", "", 250, 50, function(v) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+LocalPlayer:NewButton("chariosware", "", function()
 repeat wait()
 until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
 local mouse = game.Players.LocalPlayer:GetMouse()
@@ -117,9 +119,6 @@ end)
 Fly()
 end)
 
-LocalPlayer:NewSlider("SliderText", "SliderInfo", 250, 50, function(v) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-end)
 dhmdh:NewButton("Softvex", "", function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Airsoft0001/69/main/69"),true))()
 end)
