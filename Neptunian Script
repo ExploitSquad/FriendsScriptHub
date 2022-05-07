@@ -1,6 +1,5 @@
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
 --- Was supposed to be for the770zone, or VengefulProgram.
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/GelatekV2/main/LoadLibrary.lua"))()
 -- its open source so you can always change the link.
 
 warn'Neptune/Neptunian V'
